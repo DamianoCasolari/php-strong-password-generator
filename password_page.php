@@ -44,7 +44,7 @@ $_SESSION['pasword'] = generatePasword($_GET['length'])
         <div class="psw_container text-white fs-2 mt-3 border border-1 rounded-4 px-5 py-3">
             <?= $_SESSION['pasword'] ?>
         </div>
-        <form class="d-flex flex-column justify-content-center align-items-center" method="get">
+        <form class="d-flex flex-column justify-content-center align-items-center" action="index.php" method="get">
             <div class="">
                 <button class="btn btn-primary m-4" type="submit">Return home page</button>
             </div>
