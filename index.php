@@ -1,20 +1,10 @@
 <?php
 
-function generatePasword($length)
-{
-    $characters = '0123456789abcdefghilmnopqrstuvz$%&/=?^';
-    $randomPasword = '';
-
-    for ($i = 0; $i < $length; $i++) {
-        $randomPasword .= $characters[rand(0, strlen($characters) - 1)];
-    }
-
-    return $randomPasword;
-}
+include './function.php'
 
 
 
-?>
+    ?>
 
 
 
@@ -49,7 +39,7 @@ function generatePasword($length)
     <div class="my_container d-flex flex-column justify-content-center align-items-center p-5">
         <form class="d-flex flex-column justify-content-center align-items-center" method="get">
             <div class="my_background">
-                <label for="number_c" class="form-label text-white">Choose the number of characters for your
+                <label for="number_c" class="form-label text-white">Choose the number of characters for your new
                     password</label>
                 <input type="number" class="form-control my-3" id="number_c" name="length" required>
 
