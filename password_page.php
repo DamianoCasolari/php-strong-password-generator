@@ -1,10 +1,11 @@
 <?php
 
-// include './function.php';
-// session_start();
+include './function.php';
+session_start();
 
+$_SESSION['pasword'] = generatePasword($_GET['length'])
 
-?>
+    ?>
 
 
 
@@ -36,17 +37,16 @@
 </head>
 
 <body>
-    <div class="my_container d-flex flex-column justify-content-center align-items-center p-5">
-        <form class="d-flex flex-column justify-content-center align-items-center" action="password_page.php"
-            method="get">
-            <div class="my_background">
-                <label for="number_c" class="form-label text-white">Choose the number of characters for your new
-                    password</label>
-                <input type="number" class="form-control my-3" id="number_c" name="length" required>
-
-            </div>
+    <div class="my_container d-flex flex-column justify-content-center align-items-center p-5 text-white">
+        <div class="text-center fs-4">This is your new pasword, <br> <span
+                class="text-decoration-underline d-inline-bloc m-2k">save it in
+                a safe place</span> </div>
+        <div class="psw_container text-white fs-2 mt-3 border border-1 rounded-4 px-5 py-3">
+            <?= $_SESSION['pasword'] ?>
+        </div>
+        <form class="d-flex flex-column justify-content-center align-items-center" method="get">
             <div class="">
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-primary m-4" type="submit">Return home page</button>
             </div>
         </form>
     </div>
