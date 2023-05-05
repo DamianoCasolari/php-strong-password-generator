@@ -1,0 +1,21 @@
+/*------ General selector-----  */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ------Utility selector-----  */
+
+/* color zone  */
+:root {
+    --light: #ffffff;
+    --dark: #0c0c0c;
+}
+
+/* dimension zone  */
+
+/* Container zone  */
+
+.my_container {
+    height: 100vh;
+    background-color: var(--dark);
+}
