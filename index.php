@@ -1,3 +1,23 @@
+<?php
+
+function generatePasword($length)
+{
+    $characters = '0123456789abcdefghilmnopqrstuvz$%&/=?^';
+    $randomPasword = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $randomPasword .= $characters[rand(0, strlen($characters) - 1)];
+    }
+
+    return $randomPasword;
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,18 +46,22 @@
 </head>
 
 <body>
-    <div class="my_container d-flex justify-content-center align-items-center">
-        <form class="d-flex flex-column justify-content-center align-items-center">
+    <div class="my_container d-flex flex-column justify-content-center align-items-center p-5">
+        <form class="d-flex flex-column justify-content-center align-items-center" method="get">
             <div class="my_background">
                 <label for="number_c" class="form-label text-white">Choose the number of characters for your
                     password</label>
-                <input type="number" class="form-control my-3" id="number_c" value="Mark" required>
+                <input type="number" class="form-control my-3" id="number_c" name="length" required>
 
             </div>
             <div class="">
                 <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </form>
+
+        <div class="psw_container text-white fs-2 mt-3 border border-1 rounded-4 px-5 py-3">
+            <?= generatePasword($_GET['length']) ?>
+        </div>
     </div>
 </body>
 

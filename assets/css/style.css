@@ -19,3 +19,7 @@ body {
     height: 100vh;
     background-color: var(--dark);
 }
+
+.psw_container {
+    word-wrap: break-word;
+}
