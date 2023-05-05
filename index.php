@@ -37,16 +37,39 @@
 
 <body>
     <div class="my_container d-flex flex-column justify-content-center align-items-center p-5">
+        <h1>Password Generator</h1>
         <form class="d-flex flex-column justify-content-center align-items-center" action="password_page.php"
             method="get">
-            <div class="my_background">
+            <div class="container_length col-12 px-4">
                 <label for="number_c" class="form-label text-white">Choose the number of characters for your new
                     password</label>
                 <input type="number" class="form-control my-3" id="number_c" name="length" required>
-
+            </div>
+            <div class="container_filter d-flex justify-content-center ">
+                <div class="col-6 px-4 d-flex justify-content-end align-items-start">
+                    <div class="text-white col-6">you can repeat a character multiple times</div>
+                    <div class="text-end col-6">
+                        <label for="repeat_yes" class="form-check-label text-white">Yes</label>
+                        <input type="radio" class="form-check-inpu my-3" id="repeat_yes" name="repeat"><br>
+                        <label for="repeat_no" class="form-check-label text-white">No</label>
+                        <input type="radio" class="form-check-inpu my-3" id="repeat_no" name="repeat">
+                    </div>
+                </div>
+                <div class="col-6 px-4 d-flex justify-content-end align-items-start">
+                    <div class="text-white col-6">what types of characters do you want in your password?</div>
+                    <div class="text-end col-6">
+                        <label for="repeat_yes" class="form-check-label text-white">Symbols</label>
+                        <input type="checkbox" class="form-check-inpu my-3" id="repeat_yes" name="repeat"> <br>
+                        <label for="repeat_no" class="form-check-label text-white">Letters</label>
+                        <input type="checkbox" class="form-check-inpu my-3" id="repeat_no" name="repeat"><br>
+                        <label for="repeat_no" class="form-check-label text-white">Numbers</label>
+                        <input type="checkbox" class="form-check-inpu my-3" id="repeat_no" name="repeat">
+                    </div>
+                </div>
             </div>
             <div class="">
                 <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-danger" type="reset">Cancel</button>
             </div>
         </form>
     </div>
