@@ -3,9 +3,10 @@
 include './function.php';
 session_start();
 
-$_SESSION['pasword'] = generatePasword($_GET['length'])
+$_SESSION['pasword'] = generatePasword($_GET['length'], $_GET['repeat']);
+var_dump($_SESSION['pasword']);
 
-    ?>
+?>
 
 
 
@@ -46,7 +47,7 @@ $_SESSION['pasword'] = generatePasword($_GET['length'])
         </div>
         <form class="d-flex flex-column justify-content-center align-items-center" action="index.php" method="get">
             <div class="">
-                <button class="btn btn-primary m-4" type="submit">Return home page</button>
+                <button class="btn btn-primary m-4" type="submit" autofocus>Return home page</button>
             </div>
         </form>
     </div>
